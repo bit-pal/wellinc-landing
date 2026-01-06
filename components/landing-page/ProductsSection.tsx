@@ -1,0 +1,133 @@
+'use client';
+
+import Link from 'next/link';
+
+export default function ProductsSection() {
+  return (
+    <section className="w-full bg-gray-100 py-16" style={{ borderTop: '5px solid #fff' }}>
+      <div className="text-center">
+        <h2 className="text-3xl lg:text-3xl py-10 font-normal tracking-tight text-gray-900 mb-4">
+          Medications In Stock Ready to Ship
+        </h2>
+      </div>
+
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch gap-10 px-4">
+        {/* Product 1: Injections */}
+        <div className="md:w-1/2 w-full flex items-center justify-center px-6 pt-6 rounded-3xl bg-white overflow-hidden relative">
+          {/* Tag */}
+          <span className="absolute bottom-10 left-4 text-black text-xs font-semibold px-6 py-3 rounded-full shadow-md z-10 bg-gradient-to-br from-yellow-200 via-pink-200 to-purple-300">
+            In Stock · Up to $200 OFF
+          </span>
+
+          <div className="text-center md:text-left max-w-md w-full">
+            <h2 className="text-5xl font-light tracking-tight text-gray-900 mb-4">
+              Compounded GLP-1 Injections
+            </h2>
+            <hr className="my-5" />
+            <img 
+              src="/landing/lp-product.jpg" 
+              alt="GLP-1 Injections"
+            />
+          </div>
+        </div>
+
+        {/* Product 2: Oral Drops */}
+        <div className="md:w-1/2 w-full flex items-center justify-center px-6 pt-6 rounded-3xl bg-white overflow-hidden relative">
+          {/* Tag */}
+          <span className="absolute bottom-10 left-4 text-black text-xs font-semibold px-6 py-3 rounded-full shadow-md z-10 bg-gradient-to-br from-yellow-200 via-pink-200 to-purple-300">
+            In Stock · Up to $200 OFF
+          </span>
+
+          <div className="text-center md:text-left max-w-md w-full">
+            <h2 className="text-5xl font-light tracking-tight text-gray-900 mb-4">
+              Compounded GLP-1 Oral Drops
+            </h2>
+            <hr className="my-5" />
+            <img 
+              src="/landing/lp-product-sublingual.jpg" 
+              alt="GLP-1 Oral Drops"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <section className="max-w-7xl mx-auto px-4 pt-8 md:pb-8">
+        {/* Mobile Slider */}
+        <div className="md:hidden border border-gray-200 rounded-xl p-4">
+          <div className="flex overflow-x-auto space-x-4 scrollbar-hide">
+            <div className="flex items-center space-x-2 min-w-max">
+              <img src="/landing/hospital.png" alt="US-Certified Pharmacy" className="w-8 h-8 object-contain" />
+              <p className="text-sm">US-Certified Pharmacy</p>
+            </div>
+            <div className="flex items-center space-x-2 min-w-max">
+              <img src="/landing/personalized.webp" alt="Personalized Treatments" className="w-8 h-8 object-contain" />
+              <p className="text-sm">Personalized Treatments</p>
+            </div>
+            <div className="flex items-center space-x-2 min-w-max">
+              <img src="/landing/trusted.webp" alt="Trusted by 100k+ Americans" className="w-8 h-8 object-contain" />
+              <p className="text-sm">Trusted by 100k+ Americans</p>
+            </div>
+            <div className="flex items-center space-x-2 min-w-max">
+              <img src="/landing/medical.webp" alt="1:1 Medical Support" className="w-8 h-8 object-contain" />
+              <p className="text-sm">1:1 Medical Support</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden md:flex justify-center space-x-12 p-4 items-center border border-gray-200 rounded-xl">
+          <div className="flex items-center text-center">
+            <img src="/landing/hospital.png" alt="US-Certified Pharmacy" className="mx-auto mr-1" />
+            <p className="text-sm lg:text-base font-normal">US-Certified Pharmacy</p>
+          </div>
+          <div className="flex items-center text-center">
+            <img src="/landing/personalized.webp" alt="Personalized Treatments" className="mx-auto mr-1" />
+            <p className="text-sm lg:text-base font-normal">Personalized Treatments</p>
+          </div>
+          <div className="flex items-center text-center">
+            <img src="/landing/trusted.webp" alt="Trusted by 100k+ Americans" className="mx-auto mr-1" />
+            <p className="text-sm lg:text-base font-normal">Trusted by 100k+ Americans</p>
+          </div>
+          <div className="flex items-center text-center">
+            <img src="/landing/medical.webp" alt="1:1 Medical Support" className="mx-auto mr-1" />
+            <p className="text-sm lg:text-base font-normal">1:1 Medical Support</p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="max-w-7xl mx-auto px-4 pt-8 md:pb-8 text-center">
+        <div className="flex justify-center gap-4 mb-2">
+          <Link
+            href="/intake/height_weight"
+            className="bg-black text-white px-12 py-3 rounded-full font-semibold shadow hover:bg-blue-500 transition"
+          >
+            Get started
+          </Link>
+          <Link
+            href="/intake/height_weight"
+            className="bg-white border border-gray-300 text-gray-800 px-12 py-3 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition"
+          >
+            See pricing
+          </Link>
+        </div>
+        <div className="alt mt-4 text-sm text-gray-900 flex flex-col items-center space-y-4">
+          <div className="flex justify-center gap-4 flex-wrap text-center">
+            <span><i className="bi bi-ban"></i> No Hidden Fees</span>
+            <span><i className="bi bi-ban"></i> No Monthly Membership</span>
+            <span><i className="bi bi-check-circle"></i> Cancel Anytime</span>
+          </div>
+
+          <img 
+            src="/landing/trustpilot-100.png" 
+            alt="Trustpilot Rating" 
+            className="w-full max-w-[300px] pt-4 mx-auto h-auto"
+            style={{ maxWidth: '300px' }}
+          />
+        </div>
+      </section>
+    </section>
+  );
+}
+
