@@ -49,7 +49,7 @@ export default function HeroSection() {
                   <img 
                     src="/landing/hero2.png" 
                     alt="Happy Customer" 
-                    className="max-w-[300px]"
+                    className="max-w-[160px]"
                   />
                 </div>
               </div>

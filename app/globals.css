@@ -546,6 +546,9 @@ select {
   overflow: hidden;
   height: 0;
   padding-bottom: 55%; /* 4:3 aspect ratio */
+  @media (max-width: 500px) {
+    padding-bottom: 100%;
+  }
 }
 
 .slider-before,

@@ -1,8 +1,26 @@
 'use client';
 
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 export default function ProductsSection() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const features = [
+    { icon: '/landing/hospital.png', text: 'US-Certified Pharmacy' },
+    { icon: '/landing/personalized.webp', text: 'Personalized Treatments' },
+    { icon: '/landing/trusted.webp', text: 'Trusted by 100k+ Americans' },
+    { icon: '/landing/medical.webp', text: '1:1 Medical Support' }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % features.length);
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [features.length]);
+
   return (
     <section className="w-full bg-gray-100 py-16" style={{ borderTop: '5px solid #fff' }}>
       <div className="text-center">
@@ -53,25 +71,24 @@ export default function ProductsSection() {
 
       {/* Features Section */}
       <section className="max-w-7xl mx-auto px-4 pt-8 md:pb-8">
-        {/* Mobile Slider */}
-        <div className="md:hidden border border-gray-200 rounded-xl p-4">
-          <div className="flex overflow-x-auto space-x-4 scrollbar-hide">
-            <div className="flex items-center space-x-2 min-w-max">
-              <img src="/landing/hospital.png" alt="US-Certified Pharmacy" className="w-8 h-8 object-contain" />
-              <p className="text-sm">US-Certified Pharmacy</p>
-            </div>
-            <div className="flex items-center space-x-2 min-w-max">
-              <img src="/landing/personalized.webp" alt="Personalized Treatments" className="w-8 h-8 object-contain" />
-              <p className="text-sm">Personalized Treatments</p>
-            </div>
-            <div className="flex items-center space-x-2 min-w-max">
-              <img src="/landing/trusted.webp" alt="Trusted by 100k+ Americans" className="w-8 h-8 object-contain" />
-              <p className="text-sm">Trusted by 100k+ Americans</p>
-            </div>
-            <div className="flex items-center space-x-2 min-w-max">
-              <img src="/landing/medical.webp" alt="1:1 Medical Support" className="w-8 h-8 object-contain" />
-              <p className="text-sm">1:1 Medical Support</p>
-            </div>
+        {/* Mobile Carousel - Hidden on desktop */}
+        <div className="md:hidden border border-gray-200 rounded-xl p-2 overflow-hidden">
+          <div className="relative flex items-center justify-center min-h-[40px]">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className={`absolute w-full flex items-center justify-center space-x-3 transition-all duration-500 ${
+                  index === currentSlide
+                    ? 'opacity-100 translate-x-0'
+                    : index < currentSlide
+                    ? 'opacity-0 -translate-x-full'
+                    : 'opacity-0 translate-x-full'
+                }`}
+              >
+                <img src={feature.icon} alt={feature.text} className="w-8 h-8 object-contain flex-shrink-0" />
+                <p className="text-sm font-medium text-center">{feature.text}</p>
+              </div>
+            ))}
           </div>
         </div>
 

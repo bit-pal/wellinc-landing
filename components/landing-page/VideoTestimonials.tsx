@@ -54,7 +54,7 @@ export default function VideoTestimonials() {
         />
 
         {/* Main Content */}
-        <div className="relative z-10 max-w-3xl mx-auto mt-30">
+        <div className="relative z-10 max-w-3xl mx-auto">
           <h1 className="text-5xl sm:text-6xl font-bold text-gray-800 pt-20">
             Real Customers. No shame.
           </h1>
