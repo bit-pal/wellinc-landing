@@ -6,24 +6,6 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-[linear-gradient(164deg,#d2ffda_0%,#e6fbff_50%,#b5d3fd_100%)] rounded-t-[48px] mt-32 overflow-hidden">
-        {/* Top CTA Section */}
-        <div className="text-center py-24 px-6 max-w-3xl mx-auto">
-          <p className="uppercase text-sm font-semibold tracking-wider text-gray-600 mb-4">Get Started</p>
-          <h2 className="text-5xl font-extrabold text-gray-900 mb-4">
-            Ready to Stop Food Cravings?<br />Get your prescription instantly!
-          </h2>
-          <p className="text-gray-600 max-w-md mx-auto mb-8">
-            It&apos;s not cheating, it&apos;s science! Lose up to 25% of your body weight (1-2lbs per day) with
-            medically supervised safe & effective treatment from the comfort of your home.
-          </p>
-          <Link
-            href="/intake/height_weight"
-            className="inline-block bg-black text-white px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-800 transition"
-          >
-            Get started
-          </Link>
-        </div>
-
         {/* Divider */}
         <div className="border-t border-gray-200"></div>
 
