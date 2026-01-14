@@ -5,15 +5,15 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <>
-      <footer className="bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100 rounded-t-[48px] mt-32 overflow-hidden">
+      <footer className="bg-[linear-gradient(164deg,#d2ffda_0%,#e6fbff_50%,#b5d3fd_100%)] rounded-t-[48px] mt-32 overflow-hidden">
         {/* Top CTA Section */}
         <div className="text-center py-24 px-6 max-w-3xl mx-auto">
           <p className="uppercase text-sm font-semibold tracking-wider text-gray-600 mb-4">Get Started</p>
           <h2 className="text-5xl font-extrabold text-gray-900 mb-4">
-            Ready to Stop Food Cravings?<br />Get $150 OFF your prescription instantly!
+            Ready to Stop Food Cravings?<br />Get your prescription instantly!
           </h2>
           <p className="text-gray-600 max-w-md mx-auto mb-8">
-            It&apos;s not cheating, it&apos;s science! Lose up to 15% of your body weight (1-2lbs per day) with
+            It&apos;s not cheating, it&apos;s science! Lose up to 25% of your body weight (1-2lbs per day) with
             medically supervised safe & effective treatment from the comfort of your home.
           </p>
           <Link
@@ -31,9 +31,9 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-6 gap-10 text-sm text-gray-700">
           {/* Column 1: Logo + copyright */}
           <div className="md:col-span-1 flex flex-col justify-between">
-            <div>
-              <img src="/landing/logo.png" alt="WellInc Logo" style={{ maxWidth: '150px' }} />
-            </div>
+            <Link href="/">
+              <span style={{ fontSize: '1.7rem' }}>Well.inc</span>
+            </Link>
             <p className="mt-4 text-xs text-gray-500">&copy; 2025 WellInc</p>
           </div>
 
@@ -83,10 +83,10 @@ export default function Footer() {
         {/* Social Icons / Certification */}
         <div className="border-t border-gray-200 py-6 px-6 flex justify-center space-x-6 text-gray-600 text-xl">
           <div className="footer-badge">
-            <img 
-              src="https://static.legitscript.com/seals/183773.png" 
-              alt="Verify LegitScript Approval" 
-              width="73" 
+            <img
+              src="https://static.legitscript.com/seals/183773.png"
+              alt="Verify LegitScript Approval"
+              width="73"
               height="79"
             />
           </div>

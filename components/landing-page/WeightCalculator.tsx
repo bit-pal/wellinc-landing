@@ -47,7 +47,7 @@ export default function WeightCalculator() {
               className="slider"
             />
 
-            <div className="tag bg-gradient-to-br from-yellow-200 via-pink-200 to-purple-300">
+            <div className="tag bg-[linear-gradient(164deg,#d2ffda_0%,#e6fbff_50%,#b5d3fd_100%)]">
               You could
               <br />
               easily lose:

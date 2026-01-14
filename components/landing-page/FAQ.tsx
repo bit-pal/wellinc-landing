@@ -328,7 +328,6 @@ export default function FAQ() {
             {openIndex === index && (
               <div className="px-6 pb-6 text-gray-700">
                 <div className="flex items-start gap-4 pl-4">
-                  <img src="/landing/a1.jpg" alt="Response Avatar" className="w-8 h-8 rounded-full mt-1" />
                   {renderAnswer(faq.answer)}
                 </div>
               </div>

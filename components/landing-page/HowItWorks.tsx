@@ -15,17 +15,17 @@ export default function HowItWorks() {
             <div className="space-y-1 text-left">
               <div>
                 <p className="text-sm font-medium" style={{ color: '#d9b596' }}>Today</p>
-                <details className="group cursor-pointer">
-                  <summary className="text-xl font-semibold text-gray-900 py-2 border-b group-open:text-indigo-600">
-                    Get $150 Off Today!
+                <details className="cursor-pointer">
+                  <summary className="text-xl font-semibold text-gray-900 py-2 border-b">
+                    See if you qualify in 5 minutes!
                   </summary>
                 </details>
               </div>
 
               <div>
                 <p className="text-sm font-medium" style={{ color: '#b89e73' }}>In 1 day</p>
-                <details className="group cursor-pointer">
-                  <summary className="text-xl font-semibold text-gray-900 py-2 border-b group-open:text-indigo-600">
+                <details className="cursor-pointer">
+                  <summary className="text-xl font-semibold text-gray-900 py-2 border-b">
                     Provider writes an Rx
                   </summary>
                 </details>
@@ -33,8 +33,8 @@ export default function HowItWorks() {
 
               <div>
                 <p className="text-sm font-medium" style={{ color: '#c9a9c9' }}>Within 1 day</p>
-                <details className="group cursor-pointer">
-                  <summary className="text-xl font-semibold text-gray-900 py-2 border-b group-open:text-indigo-600">
+                <details className="cursor-pointer">
+                  <summary className="text-xl font-semibold text-gray-900 py-2 border-b">
                     Your order ships from our licensed US pharmacies
                   </summary>
                 </details>
@@ -42,8 +42,8 @@ export default function HowItWorks() {
 
               <div>
                 <p className="text-sm font-medium" style={{ color: '#e7a1d9' }}>Free & Discreet 2-Day Delivery</p>
-                <details className="group cursor-pointer">
-                  <summary className="text-xl font-semibold text-gray-900 py-2 border-b group-open:text-indigo-600">
+                <details className="cursor-pointer">
+                  <summary className="text-xl font-semibold text-gray-900 py-2 border-b">
                     Get your medication
                   </summary>
                 </details>
@@ -51,8 +51,8 @@ export default function HowItWorks() {
 
               <div>
                 <p className="text-sm font-medium" style={{ color: '#c87ad4' }}>On-going care & support</p>
-                <details className="group cursor-pointer">
-                  <summary className="text-xl font-semibold text-gray-900 py-2 border-b group-open:text-indigo-600">
+                <details className="cursor-pointer">
+                  <summary className="text-xl font-semibold text-gray-900 py-2 border-b">
                     Begin treatment
                   </summary>
                 </details>
@@ -63,9 +63,9 @@ export default function HowItWorks() {
           {/* Right Column: Phone Image */}
           <div className="flex justify-center">
             <img 
-              src="/landing/phone.jpg" 
+              src="/landing/phone_new.png" 
               alt="Phone with app screen" 
-              className="w-full max-w-lg rounded-xl shadow-lg"
+              className="w-full rounded-xl shadow-lg max-w-[320px] p-11 bg-[linear-gradient(216deg,#eff5fa_0%,#bed2e8_100%)]"
             />
           </div>
         </section>

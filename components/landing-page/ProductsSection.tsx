@@ -33,18 +33,20 @@ export default function ProductsSection() {
         {/* Product 1: Injections */}
         <div className="md:w-1/2 w-full flex items-center justify-center px-6 pt-6 rounded-3xl bg-white overflow-hidden relative">
           {/* Tag */}
-          <span className="absolute bottom-10 left-4 text-black text-xs font-semibold px-6 py-3 rounded-full shadow-md z-10 bg-gradient-to-br from-yellow-200 via-pink-200 to-purple-300">
-            In Stock · Up to $200 OFF
+          <span className="absolute bottom-10 left-4 text-black text-xs font-semibold px-6 py-3 rounded-full shadow-md z-10 bg-[linear-gradient(164deg,#d2ffda_0%,#e6fbff_50%,#b5d3fd_100%)]">
+            As Low As $155/Mo
           </span>
 
           <div className="text-center md:text-left max-w-md w-full">
-            <h2 className="text-5xl font-light tracking-tight text-gray-900 mb-4">
-              Compounded GLP-1 Injections
+            <h2 className="text-5xl font-light tracking-tight text-gray-900 mb-4" style={{ fontSize: '2.5rem' }}>
+              Compounded GLP-1
+              <p style={{ fontSize: '1.7rem', paddingTop: '15px' }}>(Contains: Semaglutide)</p>
             </h2>
             <hr className="my-5" />
-            <img 
-              src="/landing/lp-product.jpg" 
-              alt="GLP-1 Injections"
+            <img
+              src="/landing/well_inc_final_semaglutide_transparent.png"
+              alt="GLP-1"
+              className='-mb-[10px] md:-mb-[80px]'
             />
           </div>
         </div>
@@ -52,18 +54,20 @@ export default function ProductsSection() {
         {/* Product 2: Oral Drops */}
         <div className="md:w-1/2 w-full flex items-center justify-center px-6 pt-6 rounded-3xl bg-white overflow-hidden relative">
           {/* Tag */}
-          <span className="absolute bottom-10 left-4 text-black text-xs font-semibold px-6 py-3 rounded-full shadow-md z-10 bg-gradient-to-br from-yellow-200 via-pink-200 to-purple-300">
-            In Stock · Up to $200 OFF
+          <span className="absolute bottom-10 left-4 text-black text-xs font-semibold px-6 py-3 rounded-full shadow-md z-10 bg-[linear-gradient(164deg,#d2ffda_0%,#e6fbff_50%,#b5d3fd_100%)]">
+            As Low As $225/Mo
           </span>
 
           <div className="text-center md:text-left max-w-md w-full">
-            <h2 className="text-5xl font-light tracking-tight text-gray-900 mb-4">
-              Compounded GLP-1 Oral Drops
+            <h2 className="text-5xl font-light tracking-tight text-gray-900 mb-4" style={{ fontSize: '2.5rem' }}>
+              Compounded GLP-1 + GIP
+              <p style={{ fontSize: '1.7rem', paddingTop: '15px' }}>(Contains: Tirzepatide)</p>
             </h2>
             <hr className="my-5" />
-            <img 
-              src="/landing/lp-product-sublingual.jpg" 
-              alt="GLP-1 Oral Drops"
+            <img
+              src="/landing/well_inc_final_tirzepatide_transparent.png"
+              alt="GLP-1 + GIP"
+              className='-mb-[10px] md:-mb-[80px]'
             />
           </div>
         </div>
@@ -77,13 +81,12 @@ export default function ProductsSection() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`absolute w-full flex items-center justify-center space-x-3 transition-all duration-500 ${
-                  index === currentSlide
-                    ? 'opacity-100 translate-x-0'
-                    : index < currentSlide
+                className={`absolute w-full flex items-center justify-center space-x-3 transition-all duration-500 ${index === currentSlide
+                  ? 'opacity-100 translate-x-0'
+                  : index < currentSlide
                     ? 'opacity-0 -translate-x-full'
                     : 'opacity-0 translate-x-full'
-                }`}
+                  }`}
               >
                 <img src={feature.icon} alt={feature.text} className="w-8 h-8 object-contain flex-shrink-0" />
                 <p className="text-sm font-medium text-center">{feature.text}</p>
@@ -136,9 +139,9 @@ export default function ProductsSection() {
             <span><i className="bi bi-check-circle"></i> Cancel Anytime</span>
           </div>
 
-          <img 
-            src="/landing/trustpilot-100.png" 
-            alt="Trustpilot Rating" 
+          <img
+            src="/landing/trustpilot-100.png"
+            alt="Trustpilot Rating"
             className="w-full max-w-[300px] pt-4 mx-auto h-auto"
             style={{ maxWidth: '300px' }}
           />
